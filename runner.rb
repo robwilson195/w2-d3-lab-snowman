@@ -6,11 +6,17 @@ require_relative('./player')
 
 system 'clear'
 
-p "Welcome message!!"
+p "Snowman"
+p
+p "Here's how you play:"
+p "Player one will provide a word for player two to work out."
+p "Then, player 2 will have to guess letters that they think might be in the word, revealing more of the word with each correct guess."
+p "Watch out though, as your snowman will melt a little with each incorrect guess."
+p "Six incorrect guesses, and your snowman will melt away completely! Oh no!"
 
 player_name = "Player"
 
-p "Enter the word to be guessed: "
+p "Player 1, enter the word to be guessed: "
 input_word = gets.chomp
 system 'clear'
 
