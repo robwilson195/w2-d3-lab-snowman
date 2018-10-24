@@ -9,6 +9,7 @@ class Player
 
   def lose_life()
     @lives -= 1
+    p "Nope! #{@lives} lives remaining..." if @lives > 0
   end
 
 end

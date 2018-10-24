@@ -58,9 +58,4 @@ class TestGame < MiniTest::Test
     assert_equal(:continue, @game1.game_status)
   end
 
-  def play
-    @game1.game_loop
-  end
-
-
 end

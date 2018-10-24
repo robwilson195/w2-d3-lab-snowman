@@ -14,7 +14,7 @@ class Game
 
   def game_status
     if @hidden_word.check_word_complete(@guessed_letters)
-      :won
+      :win
     elsif @player.lives <= 0
       :loss
     else
@@ -25,10 +25,10 @@ class Game
   def game_loop
     while game_status == :continue do
       p "Make a guess!"
-      guessed_letter = puts.chomp
+      guessed_letter = gets.chomp
       add_to_guessed_letters(guessed_letter)
-      @hidden_word.display_obscured_string
-      @player.lose_life unless @hidden_word.check_guess
+      p @hidden_word.display_obscured_string(@guessed_letters)
+      @player.lose_life unless @hidden_word.check_guess(guessed_letter)
     end
     if game_status == :win
       p "Congratulations, you've won!"
