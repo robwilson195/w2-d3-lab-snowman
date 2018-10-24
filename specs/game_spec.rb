@@ -41,7 +41,7 @@ class TestGame < MiniTest::Test
     @game1.add_to_guessed_letters("t")
     @game1.add_to_guessed_letters("a")
 
-    assert_equal(:won, @game1.game_status)
+    assert_equal(:win, @game1.game_status)
   end
 
   def test_game_status__loss
